@@ -1,0 +1,31 @@
+{
+  "id": 17470833,
+  "name": "Prevent Git history alterations on default branch",
+  "target": "branch",
+  "source_type": "Organization",
+  "source": "stijnklomp-LAVE",
+  "enforcement": "active",
+  "conditions": {
+    "ref_name": {
+      "exclude": [],
+      "include": [
+        "~DEFAULT_BRANCH"
+      ]
+    },
+    "repository_name": {
+      "exclude": [],
+      "include": [
+        "~ALL"
+      ]
+    }
+  },
+  "rules": [
+    {
+      "type": "deletion"
+    },
+    {
+      "type": "non_fast_forward"
+    }
+  ],
+  "bypass_actors": []
+}
